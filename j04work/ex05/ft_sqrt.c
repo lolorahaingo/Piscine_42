@@ -6,27 +6,19 @@
 /*   By: lrahaing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/08 15:44:19 by lrahaing          #+#    #+#             */
-/*   Updated: 2018/07/08 16:47:48 by lrahaing         ###   ########.fr       */
+/*   Updated: 2018/07/09 14:18:44 by lrahaing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
-    int i;
-    
-    i = 0;
-    while (i++ - 1 <= nb && i <= 46351)
-    {
-        if ((i * i) == nb)
-            return (i);
-    }
-    return (0);
-}
+	int i;
 
-int main (void)
-{
-	printf("%i", ft_sqrt(-23));
+	i = 0;
+	while (i++ <= nb && i <= 46351)
+	{
+		if ((i * i) == nb)
+			return (i);
+	}
 	return (0);
 }

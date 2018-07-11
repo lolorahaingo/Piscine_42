@@ -6,29 +6,25 @@
 /*   By: lrahaing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/08 12:29:04 by lrahaing          #+#    #+#             */
-/*   Updated: 2018/07/08 12:40:17 by lrahaing         ###   ########.fr       */
+/*   Updated: 2018/07/09 14:09:42 by lrahaing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_iterative_power(int nb, int power)
+int	ft_iterative_power(int nb, int power)
 {
 	int i;
+    int res;
 
 	i = 1;
-	while (i < power)
+    res = 1;
+    if (power < 0)
+        return (0);
+    if (power == 0)
+        return (1);
+	while (i <= power)
 	{
-		nb = nb * nb;
+		res *= nb;
 		i++;
 	}
-	if (power == 0)
-		return(1);
-	return (nb);
-}
-
-int main(void)
-{
-	printf("%i", ft_iterative_power(5, 2));
-	return (0);
+	return (res);
 }

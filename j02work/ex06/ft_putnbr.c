@@ -49,13 +49,11 @@ void	ft_putnbr(int nb)
 	int character;
 
 	i = 0;
-	copy_nb = nb;
 	if (nb < 0)
-	{
 		ft_putchar('-');
-	}
-	else
-		nb *= -1;
+    else
+        nb = -nb;
+    copy_nb = nb;
 	while (i < count_digit(nb))
 	{
 		character = copy_nb / ten_to(count_digit(copy_nb));

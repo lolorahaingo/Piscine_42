@@ -16,7 +16,7 @@ char *ft_strrev(char *str);
 
 int main(void)
 {
-    char tab[] = "abcde";
+    char tab[] = "ab";
     printf("%s", ft_strrev(tab));
     return (0);
 }

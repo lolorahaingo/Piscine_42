@@ -16,11 +16,11 @@ void ft_sort_integer_table(int *tab, int size);
 
 int main(void)
 {
-    int tab[] = {1, 2, 3, 6, 9, 4, 5, 8, 9, 6, 4, 1, 5};
-    ft_sort_integer_table(tab, 13);
+    int tab[] = {23,33,1,2,2,12,12,-12,1,84,5,5,4,5,4,5,5,6,6};
+    ft_sort_integer_table(tab, 19);
     int loop;
     
-    for(loop = 0; loop < 13; loop++)
+    for(loop = 0; loop < 19; loop++)
         printf("%i ", tab[loop]);
     
     return 0;
