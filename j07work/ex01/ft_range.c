@@ -1,33 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrahaing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/09 22:41:05 by lrahaing          #+#    #+#             */
-/*   Updated: 2018/07/12 15:16:09 by lrahaing         ###   ########.fr       */
+/*   Created: 2018/07/11 21:12:38 by lrahaing          #+#    #+#             */
+/*   Updated: 2018/07/11 21:40:34 by lrahaing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
-{
-	int	i;
+#include <stdlib.h>
+#include <stdio.h>
 
+int *ft_range(int min, int max)
+{
+	int *tab;
+	int i;
+	
 	i = 0;
-	while (str[i] != '\0')
+	tab = (int *)malloc(sizeof(int) * (max - min));
+	if (min >= max)
+		return (NULL);
+	while (min + i < max)
 	{
+		tab[i] = min + i;
 		i++;
 	}
-	return (i);
+	return (tab);		
 }
 
-int		ft_strcmp(char *s1, char *s2)
+int main (void)
 {
-	int	i;
+	int i;
+	int max;
+	int min;
 
+
+	min = 1;
+	max = 6;
 	i = 0;
-	while (s1[i] == s2[i] && (i != ft_strlen(s1) || i != ft_strlen(s2)))
+	while (i < max - min)
+	{
+		printf("%i", *(ft_range(min, max) + i));
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	free(ft_range(min, max));
+	return (0);
 }

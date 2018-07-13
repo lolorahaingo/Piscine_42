@@ -6,18 +6,16 @@
 /*   By: lrahaing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/06 13:16:00 by lrahaing          #+#    #+#             */
-/*   Updated: 2018/07/06 23:16:01 by lrahaing         ###   ########.fr       */
+/*   Updated: 2018/07/12 13:05:28 by lrahaing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int i;
 
 	i = 0;
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

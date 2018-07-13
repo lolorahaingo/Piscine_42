@@ -6,11 +6,14 @@
 /*   By: lrahaing <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 17:00:16 by lrahaing          #+#    #+#             */
-/*   Updated: 2018/07/10 17:34:35 by lrahaing         ###   ########.fr       */
+/*   Updated: 2018/07/12 11:01:51 by lrahaing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char c);
+void ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 int main (int argc, char **argv)
 {
@@ -23,5 +26,6 @@ int main (int argc, char **argv)
 		ft_putchar(argv[0][i]);
 		i++;
 	}
+	ft_putchar('\n');
     return (0);
 }

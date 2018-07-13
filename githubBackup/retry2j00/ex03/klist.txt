@@ -1,6 +1,0 @@
-Credentials cache: API:075B6A0D-423C-494E-B32A-88A00D5139E4
-        Principal: lrahaing@42.FR
-
-  Issued                Expires               Principal
-Jul  3 14:42:41 2018  Jul 10 14:42:41 2018  krbtgt/42.FR@42.FR
-Jul  3 15:25:14 2018  Jul 10 14:42:41 2018  host/vgs-fn1.42.fr@42.FR
